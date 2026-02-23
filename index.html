@@ -17,7 +17,7 @@
         <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-10">
             <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-200 ">
                 <p class="text-gray-500 text-lg font-medium">Total</p>
-                <p id="total" class="text-2xl font-bold text-blue-900 mt-4">8</p>
+                <p id="total" class="text-2xl font-bold text-blue-900 mt-4">0</p>
             </div>
             <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-200 ">
                 <p class="text-gray-500 text-lg font-medium">Interview</p>
@@ -36,13 +36,13 @@
             <p class="mb-[20px] text-[25px]">Available Jobs</p>
             <p class="opacity-70 text-[17px]">8 Jobs</p>
         </div>
-        <div class="">
-            <button id="all-btn-filter" class="bg-blue-500 px-7 py-1 text-white rounded-[10px]">All</button>
-            <button id="interview-btn-filter" class="bg-white px-7 py-1 opacity-50 rounded-[10px]">Interview</button>
-            <button id="rejected-btn-filter" class="bg-white px-7 py-1 opacity-50 rounded-[10px]">Rejected</button>
+        <div class="mb-[20px]">
+            <button onclick="toggleStyle('all-btn-filter')" id="all-btn-filter" class="bg-blue-500 px-7 py-1 text-white rounded-[10px]">All</button>
+            <button onclick="toggleStyle('interview-btn-filter')" id="interview-btn-filter" class="bg-white px-7 py-1 rounded-[10px]">Interview</button>
+            <button onclick="toggleStyle('rejected-btn-filter')" id="rejected-btn-filter" class="bg-white px-7 py-1 rounded-[10px]">Rejected</button>
         </div>
 
-        <section id="all-card" class="mt-[30px  space-y-[25px]">
+        <section id="all-cards" class="mt-[30px]  space-y-[25px]">
             <!-- card-1 -->
             <div class="card flex justify-between bg-white rounded-[8px] px-[25px] py-[30px]">
                 <!-- main part 1 -->
@@ -209,7 +209,7 @@
         </section>
     </main>
 
-
+    <script src="./script/script.js"></script>
 </body>
 
 </html>
