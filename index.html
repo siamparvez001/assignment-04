@@ -34,7 +34,7 @@
     <main class="w-[80%] mx-auto">
         <div class="flex justify-between">
             <p class="mb-[20px] text-[25px]">Available Jobs</p>
-            <p class="opacity-70 text-[17px]">8 Jobs</p>
+            <p id="available-jobs" class="opacity-70 text-[17px]">8 Jobs</p>
         </div>
         <div class="mb-[20px]">
             <button onclick="toggleStyle('all-btn-filter')" id="all-btn-filter" class="bg-blue-500 px-7 py-1 text-white rounded-[10px]">All</button>
@@ -43,7 +43,7 @@
         </div>
 
         <!-- Filtered Card -->
-         <section id="filtered-section"></section>
+        <section id="filtered-section" class="hidden mt-[30px] space-y-[25px]"></section>
 
 
         <section id="all-cards" class="mt-[30px]  space-y-[25px]">
@@ -53,7 +53,7 @@
                 <div class="space-y-[20px]">
                     <div class="card-name">
                         <p class="plant-name">Mobile First Corp</p>
-                        <p class="latin-nmae opacity-50 py-[10px]">React Native Developer</p>
+                        <p class="latin-name opacity-50 py-[10px]">React Native Developer</p>
                         <p class="place opacity-50">Remote . Full-time . $130,000-$175,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
@@ -74,7 +74,7 @@
                 <div class="space-y-[20px]">
                     <div class="card-name">
                         <p class="plant-name">WebFlow Agency</p>
-                        <p class="latin-nmae opacity-50 py-[10px]">Web Designer & Developer</p>
+                        <p class="latin-name opacity-50 py-[10px]">Web Designer & Developer</p>
                         <p class="place opacity-50">Los Angeles, CA . Part-time . $80,000-$120,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
@@ -94,7 +94,7 @@
                 <div class="space-y-[20px]">
                     <div class="card-name">
                         <p class="plant-name">DataViz Solutions</p>
-                        <p class="latin-nmae opacity-50 py-[10px]">Data Visualization Specialist</p>
+                        <p class="latin-name opacity-50 py-[10px]">Data Visualization Specialist</p>
                         <p class="place opacity-50">Boston, MA  . Full-time . $125,000-$165,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
@@ -115,7 +115,7 @@
                 <div class="space-y-[20px]">
                     <div class="card-name">
                         <p class="plant-name">CloudFirst Inc</p>
-                        <p class="latin-nmae opacity-50 py-[10px]">Backend Developer</p>
+                        <p class="latin-name opacity-50 py-[10px]">Backend Developer</p>
                         <p class="place opacity-50">Seattle, WA . Full-time . $140,000-$19,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
@@ -135,7 +135,7 @@
                 <div class="space-y-[20px]">
                     <div class="card-name">
                         <p class="plant-name">Innovation Labs</p>
-                        <p class="latin-nmae opacity-50 py-[10px]">UI/UX Engineer</p>
+                        <p class="latin-name opacity-50 py-[10px]">UI/UX Engineer</p>
                         <p class="place opacity-50">Austin, Tx . Full-time . $110,000-$150,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
@@ -155,7 +155,7 @@
                 <div class="space-y-[20px]">
                     <div class="card-name">
                         <p class="plant-name">MegaCorp Solutions</p>
-                        <p class="latin-nmae opacity-50 py-[10px]">JavaScript Developer</p>
+                        <p class="latin-name opacity-50 py-[10px]">JavaScript Developer</p>
                         <p class="place opacity-50">New York, NY . Full-time . $130,000-$175,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
@@ -175,7 +175,7 @@
                 <div class="space-y-[20px]">
                     <div class="card-name">
                         <p class="plant-name">StartupXYZ</p>
-                        <p class="latin-nmae opacity-50 py-[10px]">Full Stack Engineer</p>
+                        <p class="latin-name opacity-50 py-[10px]">Full Stack Engineer</p>
                         <p class="place opacity-50">Remote . Full-time . $120,000-$160,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
@@ -195,7 +195,7 @@
                 <div class="space-y-[20px]">
                     <div class="card-name">
                         <p class="plant-name">TechCorp Industries</p>
-                        <p class="latin-nmae opacity-50 py-[10px]">Senior Frontend Developer</p>
+                        <p class="latin-name opacity-50 py-[10px]">Senior Frontend Developer</p>
                         <p class="place opacity-50">San Francisco, CA . Full-time . $130,000-$175,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
@@ -212,7 +212,7 @@
             
         </section>
     </main>
-
+    
     <script src="./script/script.js"></script>
 </body>
 
