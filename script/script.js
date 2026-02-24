@@ -83,7 +83,7 @@ function renderFiltered(list) {
     }
 
     list.forEach(cardId => {
-        
+
         const originalCard = allCardSection.querySelector(`[data-id="${cardId}"]`);
         if (originalCard) {
             filteredSection.appendChild(originalCard.cloneNode(true));
@@ -105,23 +105,33 @@ function reRenderActiveFilter() {
 
 mainContainer.addEventListener('click', function (event) {
 
-    const card = event.target.closest('.card');
+    let element = event.target;
+    let card = null;
+
+    while (element && element !== document) {
+        if (element.classList && element.classList.contains('card')) {
+            card = element;
+            break;
+        }
+        element = element.parentNode;
+    }
+
     if (!card) return;
 
     const cardId = card.dataset.id;
 
 
-    
+
     if (event.target.classList.contains('interview-btn')) {
 
-        
+
         rejectedList = rejectedList.filter(id => id !== cardId);
 
         if (!interviewList.includes(cardId)) {
             interviewList.push(cardId);
         }
 
-        
+
         const originalCard = allCardSection.querySelector(`[data-id="${cardId}"]`);
         if (originalCard) {
             const status = originalCard.querySelector('.status');
@@ -134,18 +144,18 @@ mainContainer.addEventListener('click', function (event) {
     }
 
 
-    
+
     if (event.target.classList.contains('rejected-btn')) {
 
-        
+
         interviewList = interviewList.filter(id => id !== cardId);
 
-        
+
         if (!rejectedList.includes(cardId)) {
             rejectedList.push(cardId);
         }
 
-        
+
         const originalCard = allCardSection.querySelector(`[data-id="${cardId}"]`);
         if (originalCard) {
             const status = originalCard.querySelector('.status');
@@ -158,21 +168,33 @@ mainContainer.addEventListener('click', function (event) {
     }
 
 
-   
-    if (event.target.closest('.fa-trash-can') || event.target.classList.contains('fa-trash-can')) {
 
+    let el = event.target;
+    let trashClicked = false;
 
-        const originalCard = allCardSection.querySelector(`[data-id="${cardId}"]`);
-
-        if (originalCard) {
-            originalCard.remove();
+    while (el && el !== document) {
+        if (el.classList && el.classList.contains('fa-trash-can')) {
+            trashClicked = true;
+            break;
         }
-
-        interviewList = interviewList.filter(id => id !== cardId);
-        rejectedList = rejectedList.filter(id => id !== cardId);
-
-        calculateCount();
-        updateAvailableJobs(allCardSection.children.length);
-        reRenderActiveFilter();
+        el = el.parentNode;
     }
-});
+
+    if (trashClicked) {
+        
+
+
+            const originalCard = allCardSection.querySelector(`[data-id="${cardId}"]`);
+
+            if (originalCard) {
+                originalCard.remove();
+            }
+
+            interviewList = interviewList.filter(id => id !== cardId);
+            rejectedList = rejectedList.filter(id => id !== cardId);
+
+            calculateCount();
+            updateAvailableJobs(allCardSection.children.length);
+            reRenderActiveFilter();
+        }
+    });
