@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-gray-100 p-10">
-    <header class="w-[80%] mx-auto">
+    <header class="sm:w-[90%]  lg:w-[80%] mx-auto">
         <h1 class="text-5xl font-semibold mb-8 ">Job Application Tracker</h1>
         <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-10">
             <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-200 ">
@@ -31,15 +31,18 @@
         <hr class="my-10">
     </header>
 
-    <main class="w-[80%] mx-auto">
+    <main class="sm:w-[90%] lg:w-[80%] mx-auto">
         <div class="flex justify-between">
             <p class="mb-[20px] text-[25px]">Available Jobs</p>
             <p id="available-jobs" class="opacity-70 text-[17px]">8 Jobs</p>
         </div>
-        <div class="mb-[20px]">
-            <button onclick="toggleStyle('all-btn-filter')" id="all-btn-filter" class="bg-blue-500 px-7 py-1 text-white rounded-[10px]">All</button>
-            <button onclick="toggleStyle('interview-btn-filter')" id="interview-btn-filter" class="bg-white px-7 py-1 rounded-[10px]">Interview</button>
-            <button onclick="toggleStyle('rejected-btn-filter')" id="rejected-btn-filter" class="bg-white px-7 py-1 rounded-[10px]">Rejected</button>
+        <div class="flex mb-[20px]">
+            <button onclick="toggleStyle('all-btn-filter')" id="all-btn-filter"
+                class="bg-blue-500 px-7 py-1 text-white rounded-[10px]">All</button>
+            <button onclick="toggleStyle('interview-btn-filter')" id="interview-btn-filter"
+                class="bg-white px-7 py-1 rounded-[10px]">Interview</button>
+            <button onclick="toggleStyle('rejected-btn-filter')" id="rejected-btn-filter"
+                class="bg-white px-7 py-1 rounded-[10px]">Rejected</button>
         </div>
 
         <!-- Filtered Card -->
@@ -57,7 +60,8 @@
                         <p class="place opacity-50">Remote . Full-time . $130,000-$175,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
-                    <p class="notes">Build cross-platform mobile applications using React Native. Work on products used by millions of
+                    <p class="notes">Build cross-platform mobile applications using React Native. Work on products used
+                        by millions of
                         users worldwide.</p>
                     <div>
                         <button class="interview-btn text-green-400 px-2 py-1 border-1 rounded-[5px]">Interview</button>
@@ -78,7 +82,8 @@
                         <p class="place opacity-50">Los Angeles, CA . Part-time . $80,000-$120,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
-                    <p class="notes">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                    <p class="notes">Create stunning web experiences for high-profile clients. Must have portfolio and
+                        experience with modern web design trends.</p>
                     <div>
                         <button class="interview-btn text-green-400 px-2 py-1 border-1 rounded-[5px]">Interview</button>
                         <button class="rejected-btn text-red-400 px-2 py-1 border-1 rounded-[5px]">Rejected</button>
@@ -95,10 +100,11 @@
                     <div class="card-name">
                         <p class="plant-name">DataViz Solutions</p>
                         <p class="latin-name opacity-50 py-[10px]">Data Visualization Specialist</p>
-                        <p class="place opacity-50">Boston, MA  . Full-time . $125,000-$165,000</p>
+                        <p class="place opacity-50">Boston, MA . Full-time . $125,000-$165,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
-                    <p class="notes">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                    <p class="notes">Transform complex data into compelling visualizations. Required skills: D3.js,
+                        React, and strong analytical thinking.</p>
 
                     <div>
                         <button class="interview-btn text-green-400 px-2 py-1 border-1 rounded-[5px]">Interview</button>
@@ -119,7 +125,8 @@
                         <p class="place opacity-50">Seattle, WA . Full-time . $140,000-$19,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
-                    <p class="notes">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                    <p class="notes">Design and maintain scalable backend systems using Python and AWS. Work with modern
+                        DevOps practices and cloud infrastructure.</p>
                     <div>
                         <button class="interview-btn text-green-400 px-2 py-1 border-1 rounded-[5px]">Interview</button>
                         <button class="rejected-btn text-red-400 px-2 py-1 border-1 rounded-[5px]">Rejected</button>
@@ -139,7 +146,8 @@
                         <p class="place opacity-50">Austin, Tx . Full-time . $110,000-$150,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
-                    <p class="notes">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                    <p class="notes">Create beautiful and functional user interfaces for our suite of products. Strong
+                        design skills and frontend development expertise required.</p>
                     <div>
                         <button class="interview-btn text-green-400 px-2 py-1 border-1 rounded-[5px]">Interview</button>
                         <button class="rejected-btn text-red-400 px-2 py-1 border-1 rounded-[5px]">Rejected</button>
@@ -159,7 +167,8 @@
                         <p class="place opacity-50">New York, NY . Full-time . $130,000-$175,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
-                    <p class="notes">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                    <p class="notes">Build enterprise applications with JavaScript and modern frameworks. We offer
+                        competitive compensation, health insurance, and professional development opportunities.</p>
                     <div>
                         <button class="interview-btn text-green-400 px-2 py-1 border-1 rounded-[5px]">Interview</button>
                         <button class="rejected-btn text-red-400 px-2 py-1 border-1 rounded-[5px]">Rejected</button>
@@ -179,7 +188,8 @@
                         <p class="place opacity-50">Remote . Full-time . $120,000-$160,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
-                    <p class="notes">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                    <p class="notes">Join our fast-growing startup and work on our core platform. Experience with
+                        Node.js and React required. Great benefits and equity package included.</p>
                     <div>
                         <button class="interview-btn text-green-400 px-2 py-1 border-1 rounded-[5px]">Interview</button>
                         <button class="rejected-btn text-red-400 px-2 py-1 border-1 rounded-[5px]">Rejected</button>
@@ -199,7 +209,9 @@
                         <p class="place opacity-50">San Francisco, CA . Full-time . $130,000-$175,000</p>
                     </div>
                     <button id="" class="status px-2 py-1 bg-sky-100">Not Applied</button>
-                    <p class="notes">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                    <p class="notes">We are looking for an experienced Frontend Developer to build scalable web
+                        applications using React and TypeScript. You will work with a talented team on cutting-edge
+                        projects.</p>
                     <div>
                         <button class="interview-btn text-green-400 px-2 py-1 border-1 rounded-[5px]">Interview</button>
                         <button class="rejected-btn text-red-400 px-2 py-1 border-1 rounded-[5px]">Rejected</button>
@@ -209,11 +221,11 @@
                     <i class="fa-regular fa-trash-can"></i>
                 </div>
             </div>
-            
+
         </section>
     </main>
-    
-    <script src="./script/script.js"></script>
+
+    <script src="./script/s"></script>
 </body>
 
 </html>
